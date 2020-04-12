@@ -92,14 +92,15 @@ public class JArraySlicer<T> {
                 if(end<0) end=len+end;
 
                 T[] t;
-                boolean inverted=false;
+
                 if(begin>end) {
-                    begin^=end;end^=begin;begin^=end;
-                    inverted=true;
+                    for(int i=begin;i>end;--i){
+                        res.add(arr[i]);
+                    }
+                }else {
+                    t = Arrays.copyOfRange(arr, begin, end);
+                    Collections.addAll(res, t);
                 }
-                t=Arrays.copyOfRange(arr,begin,end);
-                Collections.addAll(res, t);
-                if(inverted) Collections.reverse(res);
             }
 
             if(count==2&&parameter.length>2){
