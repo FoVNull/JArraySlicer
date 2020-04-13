@@ -116,6 +116,7 @@ public class JArraySlicer<T> {
                     end=Integer.parseInt(parameter[1]);
                     if(end<0)  end=len+end;
                 }
+
                 int step=Math.abs(Integer.parseInt(parameter[2]));
 
                 int flag=0;
@@ -130,7 +131,6 @@ public class JArraySlicer<T> {
                         ++flag;
                     }
                 }
-
             }
         }catch (SlicerException sle){
             sle.printStackTrace();
@@ -144,14 +144,7 @@ public class JArraySlicer<T> {
         for(char c:chars){
             if(c==':') ++count;
         }
-
-        if(count==0){
-            try{
-                Integer.parseInt(exp);
-            }catch (Exception e){
-                throw new SlicerException(e.getMessage());
-            }
-        }
+        
         String[] parameter=exp.split(":");
         if(count==2&&parameter.length>2){
             int begin=0;int end=arr.length;
