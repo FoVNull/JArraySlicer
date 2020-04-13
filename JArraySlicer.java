@@ -18,42 +18,42 @@ public class JArraySlicer<T> {
         this.arr= (T[]) arr.toArray();
     }
 
-    public JArraySlicer(int[] arr) {
+    public JArraySlicer(int...arr) {
         Integer[] temp=new Integer[arr.length];
         for(int i=0;i<arr.length;++i) temp[i]=arr[i];
         this.arr= (T[]) temp;
         Collections.addAll(array, this.arr);
     }
 
-    public JArraySlicer(double[] arr) {
+    public JArraySlicer(double...arr) {
         Double[] temp=new Double[arr.length];
         for(int i=0;i<arr.length;++i) temp[i]=arr[i];
         this.arr= (T[]) temp;
         Collections.addAll(array, this.arr);
     }
 
-    public JArraySlicer(float[] arr) {
+    public JArraySlicer(float...arr) {
         Float[] temp=new Float[arr.length];
         for(int i=0;i<arr.length;++i) temp[i]=arr[i];
         this.arr= (T[]) temp;
         Collections.addAll(array, this.arr);
     }
 
-    public JArraySlicer(long[] arr) {
+    public JArraySlicer(long...arr) {
         Long[] temp=new Long[arr.length];
         for(int i=0;i<arr.length;++i) temp[i]=arr[i];
         this.arr= (T[]) temp;
         Collections.addAll(array, this.arr);
     }
 
-    public JArraySlicer(char[] arr) {
+    public JArraySlicer(char...arr) {
         Character[] temp=new Character[arr.length];
         for(int i=0;i<arr.length;++i) temp[i]=arr[i];
         this.arr= (T[]) temp;
         Collections.addAll(array, this.arr);
     }
 
-    public JArraySlicer(boolean[] arr) {
+    public JArraySlicer(boolean...arr) {
         Boolean[] temp=new Boolean[arr.length];
         for(int i=0;i<arr.length;++i) temp[i]=arr[i];
         this.arr= (T[]) temp;

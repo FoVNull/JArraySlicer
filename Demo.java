@@ -10,9 +10,10 @@ public class Demo {
         List<Integer> list= Arrays.asList(0,1,2,3,4,5,6,7,8,9);
         String[] strArr={"aa","bb","cc","dd","ee"};
         /*
-        支持:基本类型数组，Object[],java.util.List 类型的切片
+        支持:基本类型数组(支持动态参数)，Object[],java.util.List 类型的切片
          */
         JArraySlicer<Integer> slicer=new JArraySlicer<>(arr);
+        //JArraySlicer<Integer> slicer=new JArraySlicer<>(1,2,3,4);
         JArraySlicer<Double> doubleSlicer=new JArraySlicer<>(doubleArr);
         JArraySlicer<Integer> listSlicer=new JArraySlicer<>(list);
         JArraySlicer<String> strSlicer=new JArraySlicer<>(strArr);
