@@ -7,8 +7,8 @@ import java.util.List;
 
 public class JArraySlicer<T> {
     private List<T> array=new ArrayList<>();
-    private T[] arr;
-    private ExpressionChecker<T> checker=new ExpressionChecker<T>();
+    private final T[] arr;
+    private final ExpressionChecker checker=new ExpressionChecker();
 
     public JArraySlicer(T[] arr){
         Collections.addAll(array, arr);
@@ -66,7 +66,7 @@ public class JArraySlicer<T> {
         int len=arr.length;
         ArrayList<T> res=new ArrayList<>();
         try {
-            checker.ExpressionCheck(SliceExpression,arr);
+            checker.ExpressionCheck(SliceExpression,arr.length);
 
             char[] chars=SliceExpression.toCharArray();
             int count=0;
