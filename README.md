@@ -1,6 +1,6 @@
 # JArraySlicer
 ## Java Array Slicer
-## jar download: http://hikki.top/archives/
+## jar download: http://hikki.top/archives/ 
 
 Java实现数组切片功能，表达式逻辑与python相同，在python切片的基础上进行了一些微调。  
 >使用JArraySlicer类进行操作。基本操作↓，详情见Demo.java
