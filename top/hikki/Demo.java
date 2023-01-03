@@ -1,4 +1,4 @@
-import top.hikki.JArraySlicer;
+package top.hikki;
 
 import java.util.Arrays;
 import java.util.List;
