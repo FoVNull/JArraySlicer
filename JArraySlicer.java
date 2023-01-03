@@ -61,6 +61,13 @@ public class JArraySlicer<T> {
         Collections.addAll(array, this.arr);
     }
 
+    public JArraySlicer(byte...arr){
+        Byte[] temp = new Byte[arr.length];
+        for(int i=0;i<arr.length;++i) temp[i]=arr[i];
+        this.arr= (T[]) temp;
+        Collections.addAll(array, this.arr);
+    }
+
 
     public ArrayList<T> arraySlice(String SliceExpression){
         int len=arr.length;
